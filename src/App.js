@@ -19,8 +19,8 @@ class App extends Component {
     return (
       <div className="container" style={styles}>
         <Title />
-        <ToDoList />
         <ControlPanel />
+        <ToDoList />
         <Footer />
       </div>
     );
