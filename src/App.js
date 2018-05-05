@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Title from './Components/Title'
 import ToDoList from './Components/ToDoList.js'
-import ControlPanel from './Components/ControlPanel'
 import Footer from './Components/Footer'
 
 
@@ -13,13 +12,13 @@ class App extends Component {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      maxWidth: '500px'
     }
 
     return (
       <div className="container" style={styles}>
         <Title />
-        <ControlPanel />
         <ToDoList />
         <Footer />
       </div>
