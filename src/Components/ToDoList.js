@@ -3,10 +3,10 @@ import { Table } from 'reactstrap'
 
 class ToDoList extends React.Component{
   render(){
+    const toDoItems = ['Chore 1', 'Chore 2', 'Chore 3', 'Chore 4']
     const styles = {
       border: '1px #ccc solid',
       padding: '20px',
-      textAlign: 'center',
       marginBottom: '1.25rem'
     }
 
@@ -15,17 +15,23 @@ class ToDoList extends React.Component{
         <Table>
         <thead>
           <tr>
-            <th>Task #</th>
-            <th>Task</th>
-            <th>Action</th>
+            <th style={{maxWidth: '75px'}}>Task #</th>
+            <th >Task</th>
+            <th style={{textAlign: 'right'}}>Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Blah</td>
-            <td>Button Button Button</td>
-          </tr>
+          {
+            toDoItems.map((item, index) => {
+              return(
+                <tr key={item}>
+                  <th style={{maxWidth: '75px'}} scope="row">{index + 1}</th> 
+                  <td>{item}</td>
+                  <td style={{textAlign: 'right'}}>O O O</td>
+                </tr>
+              )
+            })
+          }
         </tbody>
       </Table>
       </div>
