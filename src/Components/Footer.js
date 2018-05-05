@@ -1,16 +1,16 @@
 import React from 'react'
 
 const styles = {
-  border: '1px #ccc solid',
   padding: '20px',
   textAlign: 'center',
-  marginBottom: '1.25rem'
+  marginBottom: '1.25rem',
+  fontSize: '10px'
 }
 
 const Footer = () => {
   return(
     <div style={styles}>
-      FOOTER
+      Created by Rick Brown 2018
     </div>
   )
 }

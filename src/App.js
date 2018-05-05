@@ -7,13 +7,15 @@ import Footer from './Components/Footer'
 class App extends Component {
   render() {
     const styles = {
-      border: '1px #ccc solid',
+      marginTop: '2.25rem',
+
       padding: '20px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: 'column',
-      maxWidth: '500px'
+      maxWidth: '500px',
+      boxShadow: '10px 10px 50px -9px rgba(0,0,0,0.75)'
     }
 
     return (

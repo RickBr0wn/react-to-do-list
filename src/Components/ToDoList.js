@@ -11,12 +11,18 @@ class ToDoList extends React.Component{
 
   addItem(event){
     event.preventDefault()
+    const { toDoItems} = this.state
     const newItem = this.newItem.value
 
-    this.setState({
-      toDoItems: [...this.state.toDoItems, newItem]
-    })
+    const isOnTheList = toDoItems.includes(newItem)
 
+    if(isOnTheList){
+      console.log('This item is already on the list!')
+    }else{
+      newItem !== '' && this.setState({
+        toDoItems: [...this.state.toDoItems, newItem]
+      })
+    }
     this.newItem.value = ''
   }
 
@@ -35,7 +41,7 @@ class ToDoList extends React.Component{
             <div className="input-group">
               <input ref={input => this.newItem = input} type="text" className="form-control" placeholder="Please Enter A Task" style={{marginBottom: '1.25rem'}} />
               <span className="input-group-button">
-                <button onClick={event => this.addItem(event)} className="btn btn-outline-success" type="button" >Submit</button>
+                <button onClick={event => this.addItem(event)} className="btn btn-outline-success" type="button" >Add</button>
               </span>
             </div>
           </form>
