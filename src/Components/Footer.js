@@ -7,12 +7,12 @@ const styles = {
   marginBottom: '1.25rem'
 }
 
-const Title = () => {
+const Footer = () => {
   return(
     <div style={styles}>
-      TITLE
+      FOOTER
     </div>
   )
 }
 
-export default Title
+export default Footer
